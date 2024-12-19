@@ -1,3 +1,21 @@
+.container {
+  width: 1000px;
+  height: auto;
+  display: flex;
+  gap: 1%;
+}
+
 .card {
-  width: 575px;
+  width: 69.5%;
+  height: 300px;
+}
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+.sidePanel {
+  width: 29.5%;
+}
+.sidePanel img {
+  width: 100%;
 }
