@@ -1,8 +1,6 @@
 .container {
-  width: 1000px;
+  width: 30%;
   height: auto;
-  display: flex;
-  gap: 1%;
 }
 
 .card {
