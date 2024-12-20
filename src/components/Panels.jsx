@@ -21,7 +21,7 @@ export function SidePanel(props) {
           <p>{props.title}</p>
           <h4>{props.author}</h4>
         </div>
-        <div>
+        <div c>
           <h3>{props.type}</h3>
           <p>{props.title}</p>
           <h4>{props.author}</h4>
