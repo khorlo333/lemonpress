@@ -1,15 +1,16 @@
-import { NewsItems } from "./Card";
 import Card from "./Card";
-import { RightPanell } from "./Card";
+import { RightPanell } from "./arrays";
+import { NewsItems } from "./arrays";
 
 export function RightPanel() {
-  //   <div className="rightpanel">
-  return;
-  //   RightPanell.map(() => {});
-
-  //   </div>;
+  return (
+    <div className="rightPanel">
+      {RightPanell.map((news) => {
+        return <Card />;
+      })}
+    </div>
+  );
 }
-console.log(RightPanel);
 
 export function SidePanel(props) {
   return (
@@ -17,11 +18,19 @@ export function SidePanel(props) {
       <div className="sidePanel">
         <div>
           <img src={props.image} alt="" />
-          <h3>{props.type}</h3>
-          <p>{props.title}</p>
-          <h4>{props.author}</h4>
+          <div>
+            {NewsItems.map((news) => {
+              return (
+                <div>
+                  <h3>{news.type}</h3>
+                  <p>{news.title}</p>
+                  <h4>{news.author}</h4>
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div c>
+        <div>
           <h3>{props.type}</h3>
           <p>{props.title}</p>
           <h4>{props.author}</h4>

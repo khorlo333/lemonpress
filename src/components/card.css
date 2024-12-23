@@ -11,9 +11,15 @@
   width: 100%;
   object-fit: cover;
 }
-.sidePanel {
-  width: 29.5%;
+
+#panels {
+  width: 1000px;
+  display: flex;
+  margin: auto;
 }
-.sidePanel img {
+.rightpanel {
+  width: 70%;
+}
+.rightpanel img {
   width: 100%;
 }
