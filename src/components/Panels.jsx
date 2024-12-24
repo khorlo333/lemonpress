@@ -6,7 +6,14 @@ export function RightPanel() {
   return (
     <div className="rightPanel">
       {RightPanell.map((news) => {
-        return <Card />;
+        return (
+          <Card
+            image={news.imageUrl}
+            type={news.newsType}
+            title={news.newsTitle}
+            author={news.newsAuthor}
+          />
+        );
       })}
     </div>
   );
@@ -14,28 +21,21 @@ export function RightPanel() {
 
 export function SidePanel(props) {
   return (
-    <div className="container">
-      <div className="sidePanel">
-        <div>
-          <img src={props.image} alt="" />
+    <div className="sidePanel">
+      <img src={NewsItems[0]} alt="" />
+      {NewsItems.map((news) => {
+        return (
           <div>
-            {NewsItems.map((news) => {
-              return (
-                <div>
-                  <h3>{news.type}</h3>
-                  <p>{news.title}</p>
-                  <h4>{news.author}</h4>
-                </div>
-              );
-            })}
+            <div>
+              <Card
+                type={news.newsType}
+                title={news.newsTitle}
+                author={news.newsAuthor}
+              />
+            </div>
           </div>
-        </div>
-        <div>
-          <h3>{props.type}</h3>
-          <p>{props.title}</p>
-          <h4>{props.author}</h4>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 }

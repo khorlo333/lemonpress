@@ -36,9 +36,13 @@
   display: flex;
   margin: auto;
 }
-.rightpanel {
+.rightPanel {
   width: 70%;
 }
-.rightpanel img {
+.sidePanel {
+  width: 30%;
+}
+.sidePanel img {
   width: 100%;
+  height: auto;
 }
